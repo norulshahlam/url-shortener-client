@@ -15,11 +15,13 @@ const UseShortenedUrl = ({ data, setData, handleDelete }) => {
           error: false,
           loading: false,
           value: response.data,
+          message: "Welcome!"
         });
         console.log(data);
       })
       .catch((error) => {
         console.log(error.response?.data);
+        setData({ ...data, loading: false, message: "Unable to connect" });
       });
   }, [data.loading]);
 

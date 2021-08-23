@@ -7,7 +7,7 @@ import { API_URL } from "./Constants";
 function App() {
   let [data, setData] = useState({
     loading: true,
-    value: [""],
+    value: [],
     error: false,
     message: "",
   });
