@@ -23,7 +23,7 @@ function App() {
         setData({ ...data, loading: true, message: response.data });
       })
       .catch((error) => {
-        console.log(error.response.data);
+        console.log(error.response?.data);
       });
   };
 
@@ -47,7 +47,7 @@ function App() {
         });
       })
       .catch((error) => {
-        setData({ ...data, error: true, message: error.response.data });
+        setData({ ...data, error: true, message: error.response?.data });
       });
   };
   return (

@@ -19,7 +19,7 @@ const UseShortenedUrl = ({ data, setData, handleDelete }) => {
         console.log(data);
       })
       .catch((error) => {
-        console.log(error.response.data);
+        console.log(error.response?.data);
       });
   }, [data.loading]);
 
