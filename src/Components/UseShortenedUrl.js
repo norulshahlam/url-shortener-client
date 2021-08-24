@@ -62,7 +62,7 @@ const UseShortenedUrl = ({ data, setData, handleDelete }) => {
                         handleDelete(e);
                       }}
                     >
-                     <i class="fa fa-trash"></i>
+                      Delete
                     </button>
                   </td>
                 </tr>

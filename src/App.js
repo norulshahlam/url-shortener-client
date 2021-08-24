@@ -14,7 +14,6 @@ function App() {
 
   const handleDelete = (e) => {
     e.preventDefault();
-    console.log(e);
     axios({
       method: "delete",
       url: `${API_URL}/${e.target.id}`,
