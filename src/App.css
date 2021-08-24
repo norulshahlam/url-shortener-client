@@ -1,31 +1,41 @@
 .App {
   text-align: center;
   border: 1px solid black;
+  /* min-width: 250px */
+  
 }
 
-tr,td, table{
+tr,td,th, table{
   border: 1px solid black;
   margin: 0;
   border-collapse: collapse;
   border-spacing: 0;
-}
-th{
-  border-right: 1px solid black;
-  border-bottom: 1px solid black;
-  margin: 0;
+  text-align: left;
+ 
+  max-width:240px;
+  /* width: 80%; */
+  overflow: hidden;
+  padding: 0;
 }
 
-table{
-margin: auto
+
+table,tr{
+margin: auto;
+max-width: 500px;
+
 }
 .useUrl, .shortenUrl{
   background: ivory;
   border: 1px solid black;
-  margin: 0.5rem;
-  padding: 1rem;
+  margin: 0.1rem;
+  padding: 10px;
   border-radius: 10px;
 }
 
 .input{
-  width: 40%;
+  width: 70%;
+}
+
+button{
+  margin: 0 10px;
 }

@@ -63,6 +63,11 @@ function App() {
         setData={setData}
         handleDelete={handleDelete}
       />
+<div>
+
+      By Norulshahlam
+</div>
+      norulshahlam@gmail.com
     </div>
   );
 }

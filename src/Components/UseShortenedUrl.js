@@ -15,7 +15,7 @@ const UseShortenedUrl = ({ data, setData, handleDelete }) => {
           error: false,
           loading: false,
           value: response.data,
-          message: "Welcome!"
+          message: "Welcome!",
         });
         console.log(data);
       })
@@ -33,32 +33,38 @@ const UseShortenedUrl = ({ data, setData, handleDelete }) => {
             <h2>Use your shortened url</h2>
             <table>
               <tr>
-                <th>id</th>
-                <th>Shortened URL</th>
-                <th>Long URL</th>
+                <th>Info</th>
                 <th>delete?</th>
               </tr>
-
               {data.value.map((v, i) => (
                 <tr key={v.id}>
-                  <td>{i + 1}</td>
                   <td>
-                    {" "}
-                    <a
-                      href={`${API_URL}/${v.alias}`}
-                      target="_blank"
-                      rel="noreferrer"
-                    >{`${API_URL}/${v.alias}`}</a>{" "}
+                    <div>
+                      <b>id:</b> {i + 1}
+                    </div>
+                    <div>
+                      <b>Shortened URL: </b>
+                      <a
+                        href={`${API_URL}/${v.alias}`}
+                        target="_blank"
+                        rel="noreferrer"
+                      >{`${API_URL}/${v.alias}`}</a>
+                    </div>
+
+                    <div>
+                      <b>Long URL:</b> {v.url}
+                    </div>
                   </td>
-                  <td>{v.url}</td>
-                  <button
-                    id={v.id}
-                    onClick={(e) => {
-                      handleDelete(e);
-                    }}
-                  >
-                    Delete
-                  </button>
+                  <td>
+                    <button
+                      id={v.id}
+                      onClick={(e) => {
+                        handleDelete(e);
+                      }}
+                    >
+                     <i class="fa fa-trash"></i>
+                    </button>
+                  </td>
                 </tr>
               ))}
             </table>
